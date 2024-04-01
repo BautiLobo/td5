@@ -20,7 +20,6 @@ def main():
 	# Ejemplo para definir una grilla de m x n.
 	grid_x = np.linspace(min(instance["x"]), max(instance["x"]), num=m, endpoint=True)
 	grid_y = np.linspace(min(instance["y"]), max(instance["y"]), num=n, endpoint=True)
-
 	# TODO: aca se deberia ejecutar el algoritmo.
 
 	best = {}
