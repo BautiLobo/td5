@@ -51,5 +51,4 @@ def main():
 	
 if __name__ == "__main__":
 	main()
-	print(grid_x)
-	print(grid_y)
+
