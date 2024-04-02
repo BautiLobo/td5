@@ -1,6 +1,5 @@
 import json
 import numpy as np
-print(np.__version__)
 
 BIG_NUMBER = 1e10 # Revisar si es necesario.
 
@@ -16,11 +15,32 @@ def main():
 	m = 6
 	n = 6
 	N = 5
-	
+	# return y1 + (y2 - y1) * (t - x1) / (x2 - x1)	
 	# Ejemplo para definir una grilla de m x n.
 	grid_x = np.linspace(min(instance["x"]), max(instance["x"]), num=m, endpoint=True)
 	grid_y = np.linspace(min(instance["y"]), max(instance["y"]), num=n, endpoint=True)
+	for i in range(n):
+		lista_breakpoints:list[tuple]
+		lista_breakpoints.append([grid_x[i],grid_y[i]])
+	error=0
 	# TODO: aca se deberia ejecutar el algoritmo.
+	def funcion_lineal(t, x1, x2, y1, y2):
+		for i in range(len(lista_breakpoints)):
+			x1= grid_x[i-1]
+			x2= grid_x[i]
+			y1= grid_y[i-1]
+			y2= grid_y[i]
+			pendiente= (y2 - y1) / (x2 - x1)
+			#calculo el error
+			for j in range():
+
+
+
+
+
+
+
+
 
 	best = {}
 	best['sol'] = [None]*(N+1)
@@ -50,5 +70,3 @@ def main():
 	
 if __name__ == "__main__":
 	main()
-	print(grid_x)
-	print(grid_y)
